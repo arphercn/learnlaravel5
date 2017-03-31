@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App;
 use App\Contracts\TestContract;
+use App\models\Article;
 
 class TestController extends Controller
 {
@@ -30,5 +31,4 @@ class TestController extends Controller
         $this->test->callMe('TestController');
     }
 
-    //其他控制器动作
 }

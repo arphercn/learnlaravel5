@@ -34,6 +34,7 @@
                     @endforeach
 
                 </div>
+                    {!! $articles->render() !!}
             </div>
         </div>
     </div>

@@ -126,3 +126,6 @@ Route::get('country/{id}/posts', 'CountryController@getPosts');
 
 // 多态关联 - 允许一个模型Comment在单个关联下属于多个不同父模型Article,Video
 Route::get('video/{id}/comments', 'VideoController@getComments');
+
+
+Route::get('article/log', 'ArticleController@log');
