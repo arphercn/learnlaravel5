@@ -1,4 +1,34 @@
 # Laravel PHP Framework
+## arpher adding
+从5.2到5.3升级
+复制5.3的composer.json到文件下，覆盖掉原来的
+
+参考https://laracasts.com/discuss/channels/forge/laravel-53-update-causing-error-on-forge-only
+修改 App\Providers\RouteServiceProvide
+App\Providers\EventServiceProvider
+
+public function boot()
+    {
+        parent::boot();
+    }
+
+一直用google大法
+
+http://www.cnblogs.com/yuwensong/p/3955834.html
+导入数据（注意sql文件的路径）的方法
+mysql>source /home/abc/abc.sql;
+
+https://github.com/laravel/framework/issues/9080
+错误The only supported ciphers are AES-128-CBC and AES-256-CBC
+解决
+run this command
+
+php artisan key:generate
+and the clear config cache using
+
+php artisan config:clear
+will solve this problem
+
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
@@ -25,3 +55,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+
